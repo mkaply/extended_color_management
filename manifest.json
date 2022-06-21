@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Extended Color Management",
+  "version": "1.0.2",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "browserSettings",
+    "notifications",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "32": "blank.png"
+    },
+    "default_title": "Extended Color Management",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{816dd215-0e91-4621-9d89-3bac78798e6f}"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
