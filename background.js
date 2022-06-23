@@ -1,10 +1,12 @@
 let managedIcon = {
   16: "managed_16.png",
-  32: "managed_32.png"
+  32: "managed_32.png",
+  64: "managed_64.png"
 }
 let unmanagedIcon = {
   16: "unmanaged_16.png",
-  32: "unmanaged_32.png"
+  32: "unmanaged_32.png",
+  64: "unmanaged_64.png"
 }
 
 let useNativeSRGB;
@@ -25,7 +27,7 @@ function updateIcon() {
         chrome.storage.local.set({"extended_color_management_state": "enabled"});
       }
     });
-  });  
+  });
 }
 // We only update the icon at startup since the browser needs to be restarted for changes to take effect.
 updateIcon();

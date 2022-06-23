@@ -15,7 +15,7 @@ browser.browserSettings.colorManagement.useNativeSRGB.get({}).then(result1 => {
           document.getElementById("message").textContent = "Color pass-through is enabled.";
           document.getElementById("button").textContent = "Click here to disable color pass-through";
           document.getElementById("button").nativeColorManaged = false;
-        }  
+        }
       } else {
         document.getElementById("button").hidden = true;
         document.getElementById("message").textContent = "Restart Firefox for your change to take effect.";
